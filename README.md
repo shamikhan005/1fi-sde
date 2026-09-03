@@ -9,11 +9,6 @@ A responsive product catalogue and EMI-plan selector. The app lists phones at `/
 - **Database and image host:** Supabase PostgreSQL and a public Supabase Storage bucket.
 - **Tests:** Node's built-in test runner exercises the EMI calculation without adding a test framework dependency.
 
-```text
-Browser UI -> /api/products or /api/products/[slug] -> Supabase PostgreSQL
-                                                       -> Supabase Storage public URL
-```
-
 The public Supabase URL and publishable key are deliberately safe to expose to the browser. Security comes from PostgreSQL Row Level Security: anonymous users can read only active catalogue rows and cannot write to any table.
 
 ## Run locally
